@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FLL 2014 Scoreboard</title>
+</head>
+<body>
+
+<h1>FLL 2014 Scoreboard</h1>
+
+<h2>Opening Doors</h2>
+
+<label><input type="checkbox" name="fll-openingdoors"> Open with handle pushed down (15pts)</label>
+
+<h2>Cloud Access</h2>
+
+<label><input type="checkbox" name="fll-cloudaccess"> SD card is up (30pts)</label>
+
+<h2>Community Learning</h2>
+
+<label><input type="checkbox" name="fll-communitylearning"> Loop no longer touch the community model (25pts)</label>
+
+<h2>Robotics Competition</h2>
+
+<label><input type="radio" name="fll-roboticscompetition" value="start" checked> Loop is inside</label>
+<label><input type="radio" name="fll-roboticscompetition" value="insert"> The robotics insert is correctly placed (25pts)</label>
+<label><input type="radio" name="fll-roboticscompetition" value="released"> The robotics insert is correctly placed &amp; Loop was released (55pts)</label>
+
+<h2>Using the Right Senses</h2>
+
+<label><input type="checkbox" name="fll-rightsenses"> The loop was released with the slider (40pts)</label>
+
+<h2>Thinking Outside the Box</h2>
+
+<label><input type="radio" name="fll-thinkingoutsidebox" value="in" checked> Box is untouched</label>
+<label><input type="radio" name="fll-thinkingoutsidebox" value="facedown"> The idea model no longer touch the box, with bulp facing down (25pts)</label>
+<label><input type="radio" name="fll-thinkingoutsidebox" value="faceup"> The idea model no longer touch the box, with bulp facing up (40pts)</label>
+
+<h2>Remote Communication / Learning</h2>
+
+<label><input type="checkbox" name="fll-remotecommunication"> Slider pulled west (40pts)</label>
+
+<h2>Search Engine</h2>
+
+<label><input type="radio" name="fll-searchengine" value="start" checked> Not touched</label>
+<label><input type="radio" name="fll-searchengine" value="pushed"> Slider pushed (15pts)</label>
+<label><input type="radio" name="fll-searchengine" value="removed"> Slider pushed &amp; right loop(s) removed (60pts)</label>
+
+<h2>Sports</h2>
+
+<label><input type="radio" name="fll-sports" value="start" checked> Not shooted</label>
+<label><input type="radio" name="fll-sports" value="shoot"> Took a shoot (30pts)</label>
+<label><input type="radio" name="fll-sports" value="goal"> Took a shoot &amp; Goal (60pts)</label>
+
+<h2>Reverse Engineering</h2>
+
+<label><input type="radio" name="fll-reverseengineering" value="start" checked> Basket not touched</label>
+<label><input type="radio" name="fll-reverseengineering" value="base"> Basket in base (30pts)</label>
+<label><input type="radio" name="fll-reverseengineering" value="replicated"> Basket in base &amp; Model replicated (45pts)</label>
+
+<h2>Adapting to Changing Conditions</h2>
+
+<label><input type="checkbox" name="fll-changingconditions"> Model rotated 90° counter-clockwise (15pts)</label>
+
+<h2>Apprenticeship</h2>
+
+<label><input type="radio" name="fll-apprenticeship" value="start" checked> Not built</label>
+<label><input type="radio" name="fll-apprenticeship" value="built"> Model built (20pts)</label>
+<label><input type="radio" name="fll-apprenticeship" value="circle"> Model built &amp; Placed in circle (35pts)</label>
+
+<h2>Engagement</h2>
+
+<label><input type="checkbox" name="fll-engagement-lever"> Level is engaged (20pts)</label>
+<label><input type="number" name="fll-engagement-rotations" min="0" max="49" value="0"> Pinwheel turns (+ (9+turns %) pts if turns > 0)</label>
+
+<h2>Project Based Learning</h2>
+
+<label><input type="number" name="fll-projetlearning-loops" min="0" max="8" value="0"> Loops holded by the scale (20pts for the first loop, 10pts for each other)</label>
+
+<h2>Penalty Points</h2>
+
+<label><input type="number" name="fll-penaltypoints" min="0" max="8" value="0"> Penaties (-10pts each)</label>
+
+<p>Total points: <span id="totalpoints">-</span><span id="totaldetails"></span></p>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" >
+
+$(document).ready(function() {
+	function calculatePoints() {
+		var points = 0;
+		
+		// Opening Doors
+		points += $('input[name=fll-openingdoors]').is(':checked') ? 15 : 0;
+		
+		// Cloud Access
+		points += $('input[name=fll-cloudaccess]').is(':checked') ? 30 : 0;
+		
+		// Community Learning
+		points += $('input[name=fll-communitylearning]').is(':checked') ? 25 : 0;
+		
+		// Robotics Competition
+		var roboticscompetition_val = $('input[name=fll-roboticscompetition]:checked').val();
+		points += roboticscompetition_val == 'released' ? 55 : roboticscompetition_val == 'insert' ? 25 : 0;
+		
+		// Using the Right Senses
+		points += $('input[name=fll-rightsenses]').is(':checked') ? 25 : 0;
+		
+		// Thinking Outside the Box
+		var thinkingoutsidebox_val = $('input[name=fll-thinkingoutsidebox]:checked').val();
+		points += thinkingoutsidebox_val == 'faceup' ? 40 : thinkingoutsidebox_val == 'facedown' ? 25 : 0;
+		
+		// Remote Communication / Learning
+		points += $('input[name=fll-remotecommunication]').is(':checked') ? 40 : 0;
+		
+		// Search Engine
+		var searchengine_val = $('input[name=fll-searchengine]:checked').val();
+		points += searchengine_val == 'removed' ? 60 : searchengine_val == 'pushed' ? 15 : 0;
+		
+		// Sports
+		var sports_val = $('input[name=fll-sports]:checked').val();
+		points += sports_val == 'goal' ? 60 : sports_val == 'shoot' ? 30 : 0;
+		
+		// Reverse Engineering
+		var reverseengineering_val = $('input[name=fll-reverseengineering]:checked').val();
+		points += reverseengineering_val == 'replicated' ? 45 : reverseengineering_val == 'base' ? 30 : 0;
+		
+		// Adapting to Changing Conditions
+		points += $('input[name=fll-changingconditions]').is(':checked') ? 15 : 0;
+		
+		// Apprenticeship
+		var apprenticeship_val = $('input[name=fll-apprenticeship]:checked').val();
+		points += apprenticeship_val == 'circle' ? 35 : apprenticeship_val == 'built' ? 20 : 0;
+		
+		// Project Based Learning
+		var projetlearning_loops = $('input[name=fll-projetlearning-loops]').val();
+		var projetlearning_additionalloops = projetlearning_loops > 0 ? projetlearning_loops-1 : 0;
+		points += projetlearning_loops > 0 ? 20 : 0; // First loop
+		points += projetlearning_additionalloops*10; // Other loops
+		
+		// Penalty Points
+		points -= $('input[name=fll-penaltypoints]').val()*10;
+		
+		// Engagement
+		var engagement_lever = $('input[name=fll-engagement-lever]').is(':checked');
+		var engagement_rotations = parseInt($('input[name=fll-engagement-rotations]').val());
+		var additional_percent = engagement_lever ? engagement_rotations > 0 ? engagement_rotations+9 : 0 : 0;
+		
+		$('#totaldetails').html(engagement_lever && engagement_rotations > 0 ? '( '+points+' subtotal + '+additional_percent+'% + 20 )' : '');
+		points += (additional_percent/100)*points;
+		points += engagement_lever ? 20 : 0; // Lever points added in last place
+		
+		$('#totalpoints').html(points);
+	}
+	
+	// On every change
+	$('input').change(calculatePoints);
+	
+	// Init
+	calculatePoints();
+});
+
+</script>
+
+</body>
+</html>
