@@ -1,0 +1,149 @@
+/**
+ * FLL Scoreboard 2014
+ *
+ * @author Clark Winkelmann
+ *
+ */
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+
+body{
+	background: #FFF;
+	color: #333;
+	font-family: Arial, sans-serif;
+}
+
+.content{
+	width: 1500px;
+	margin: 0 auto;
+}
+
+.header{
+	overflow: hidden;
+	padding: 0.5em 0.3em;
+	padding-left: 260px;
+	background-image: url(../img/worldclasslogo.png);
+	background-repeat: no-repeat;
+	background-position: 20px 0.3em;
+}
+
+.header h1{
+	margin: 0;
+	padding: 0.3em 0;
+	font-size: 3em;
+}
+
+.header h1 small{
+	color: #999;
+	font-size: 1em;
+}
+
+.header .score{
+	float: right;
+	width: 31em;
+	color: #F78B1F;
+	font-weight: bold;
+	text-align: center;
+}
+
+.header .score .finalscore{
+	font-size: 5em;
+	line-height: 1em;
+}
+
+.header .score .subtotal{
+	min-height: 1.2em;
+}
+
+.table{
+	position: relative;
+	width: 1500px;
+	min-height: 740px;
+	background-image: url(../img/table.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+}
+
+.mission{
+	position: absolute;
+	width: 200px;
+	margin-left: -100px;
+	min-height: 150px;
+	margin-top: -75px;
+	padding: 10px;
+	background: rgba(239,239,239,0.95);
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+	border: 2px solid #F78B1F;
+}
+
+.mission.openingdoors			{ top: 60%;	left: 20%; }
+.mission.cloudaccess				{ top: 67%;	left: 65%; }
+.mission.communitylearning		{ top: 86%;	left: 80%; }
+.mission.roboticscompetition	{ top: 50%;	left: 50%; }
+.mission.rightsenses				{ top: 15%;	left: 80%; }
+.mission.thinkingoutsidebox	{ top: 43%;	left: 90%; }
+.mission.remotecommunication	{ top: 40%;	left: 71%; }
+.mission.searchengine			{ top: 35%;	left: 30%; }
+.mission.sports					{ top: 25%;	left: 46%; }
+.mission.reverseengineering	{ top: 10%;	left: 62%; }
+.mission.changingconditions	{ top: 86%;	left: 33%; }
+.mission.apprenticeship			{ top: 10%;	left: 21%; }
+.mission.engagement				{ top: 86%;	left: 50%; }
+.mission.projetlearning			{ top: 35%;	left: 10%; }
+.mission.penaltypoints			{ top: 86%;	left: 10%; }
+
+.mission h2{
+	margin: 0;
+	margin-bottom: 0.2em;
+	padding: 0.2em 0;
+	border-bottom: 2px solid #CCC;
+	font-size: 1em;
+	line-height: 1em;
+}
+
+.mission label{
+	display: block;
+	padding: 0.1em;
+	font-size: 0.9em;
+	line-height: 1.1em;
+}
+
+.mission label:hover{
+	background: #CFCFCF;
+}
+
+.mission em{
+	color: #666;
+	font-style: normal;
+}
+
+.mission em::before{ content: '('; }
+.mission em::after{ content: ')'; }
+
+.reset{
+	position: absolute;
+	top: 2%;
+	left: 38%;
+	min-width: 10em;
+	margin-left: -5em;
+	padding: 0.5em;
+	background: rgba(239,239,239,0.95);
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+
+.footer{
+	color: #AAA;
+	text-align: center;
+}
+
+.footer a{
+	color: inherit;
+}
