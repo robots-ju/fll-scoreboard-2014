@@ -1,0 +1,83 @@
+/**
+ * FLL Scoreboard 2014
+ *
+ * @author Clark Winkelmann
+ *
+ * Design of the printed scoreboard
+ *
+ */
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body{
+	background: #FFF;
+	font-family: Arial, sans-serif;
+}
+
+.header .score,
+.reset,
+.footer{
+	display: none;
+}
+
+.header h1{
+	font-size: 3em;
+}
+
+.header small{
+	font-size: 1em;
+}
+
+.table{
+	display: table;
+}
+
+.mission{
+	display: table-row;
+}
+
+.mission h2{
+	margin: 0;
+	padding: 0.2em 0;
+	line-height: 1em;
+}
+
+.mission label{
+	padding: 0.1em;
+	font-size: 0.9em;
+	line-height: 1.1em;
+}
+
+.mission em{
+	font-style: normal;
+}
+
+.mission em::before{ content: '('; }
+.mission em::after{ content: ')'; }
+
+.mission .field,
+.mission .score{
+	display: table-cell;
+	padding: 0.5em;
+	border: 1px solid;
+}
+
+.mission.header .field,
+.mission.header .score{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.mission .field{
+	min-width: 1200px; /* forces the printer to use a large table */
+}
+
+.mission .score{
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+}

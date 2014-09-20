@@ -3,13 +3,14 @@
  *
  * @author Clark Winkelmann
  *
+ * Design of the graphical scoreboard
+ *
  */
 
 * {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-
 
 body{
 	background: #FFF;
@@ -146,4 +147,11 @@ body{
 
 .footer a{
 	color: inherit;
+}
+
+/* Only for printing purpose */
+.mission.header,
+.mission.total,
+.mission .score{
+	display: none;
 }

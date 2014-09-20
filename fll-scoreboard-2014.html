@@ -5,121 +5,196 @@
 	<meta name="author" content="Clark Winkelmann">
 	<meta name="generator" content="Bluefish 2.2.6">
 	<title>FLL 2014 Scoreboard</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css" media="screen">
+	<link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
 
 <div class="content">
 	<div class="header">
 		<div class="score">
-			<div class="finalscore">Score <span id="totalpoints">-</span></div>
+			<div class="finalscore">Score <span class="totalpoints">-</span></div>
 			<div class="subtotal"><span id="totaldetails"></span></div>
 		</div>
+		
 		<h1><small>Unofficial</small> FLL 2014 Scoreboard</h1>
 	</div>
 	
 	<form class="table">
+		<div class="mission header">
+			<div class="field">Mission</div>
+			<div class="score">Score</div>
+		</div>
+		
 		<div class="mission openingdoors">
-			<h2>Opening Doors</h2>
+			<div class="field">
+				<h2>Opening Doors</h2>
+				
+				<label><input type="checkbox" name="fll-openingdoors"> Open with handle pushed down <em>15pts</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-openingdoors"> Open with handle pushed down <em>15pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission cloudaccess">
-			<h2>Cloud Access</h2>
+			<div class="field">
+				<h2>Cloud Access</h2>
+				
+				<label><input type="checkbox" name="fll-cloudaccess"> SD card is up <em>30pts</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-cloudaccess"> SD card is up <em>30pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission communitylearning">
-			<h2>Community Learning</h2>
+			<div class="field">
+				<h2>Community Learning</h2>
+				
+				<label><input type="checkbox" name="fll-communitylearning"> Loop no longer touch the community model <em>25pts</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-communitylearning"> Loop no longer touch the community model <em>25pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission roboticscompetition">
-			<h2>Robotics Competition</h2>
+			<div class="field">
+				<h2>Robotics Competition</h2>
+				
+				<label><input type="radio" name="fll-roboticscompetition" value="start" checked> Loop is inside</label>
+				<label><input type="radio" name="fll-roboticscompetition" value="insert"> The robotics insert is correctly placed <em>25pts</em></label>
+				<label><input type="radio" name="fll-roboticscompetition" value="released"> The robotics insert is correctly placed &amp; Loop was released <em>55pts</em></label>
+			</div>
 			
-			<label><input type="radio" name="fll-roboticscompetition" value="start" checked> Loop is inside</label>
-			<label><input type="radio" name="fll-roboticscompetition" value="insert"> The robotics insert is correctly placed <em>25pts</em></label>
-			<label><input type="radio" name="fll-roboticscompetition" value="released"> The robotics insert is correctly placed &amp; Loop was released <em>55pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission rightsenses">
-			<h2>Using the Right Senses</h2>
+			<div class="field">
+				<h2>Using the Right Senses</h2>
+				
+				<label><input type="checkbox" name="fll-rightsenses"> The loop was released with the slider <em>40pts</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-rightsenses"> The loop was released with the slider <em>40pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission thinkingoutsidebox">
-			<h2>Thinking Outside the Box</h2>
+			<div class="field">
+				<h2>Thinking Outside the Box</h2>
+				
+				<label><input type="radio" name="fll-thinkingoutsidebox" value="in" checked> Box is untouched</label>
+				<label><input type="radio" name="fll-thinkingoutsidebox" value="facedown"> The idea model no longer touch the box, with bulp facing down <em>25pts</em></label>
+				<label><input type="radio" name="fll-thinkingoutsidebox" value="faceup"> The idea model no longer touch the box, with bulp facing up <em>40pts</em></label>
+			</div>
 			
-			<label><input type="radio" name="fll-thinkingoutsidebox" value="in" checked> Box is untouched</label>
-			<label><input type="radio" name="fll-thinkingoutsidebox" value="facedown"> The idea model no longer touch the box, with bulp facing down <em>25pts</em></label>
-			<label><input type="radio" name="fll-thinkingoutsidebox" value="faceup"> The idea model no longer touch the box, with bulp facing up <em>40pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission remotecommunication">
-			<h2>Remote Communication / Learning</h2>
+			<div class="field">
+				<h2>Remote Communication / Learning</h2>
+				
+				<label><input type="checkbox" name="fll-remotecommunication"> Slider pulled west <em>40pts</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-remotecommunication"> Slider pulled west <em>40pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission searchengine">
-			<h2>Search Engine</h2>
+			<div class="field">
+				<h2>Search Engine</h2>
+				
+				<label><input type="radio" name="fll-searchengine" value="start" checked> Not touched</label>
+				<label><input type="radio" name="fll-searchengine" value="pushed"> Slider pushed <em>15pts</em></label>
+				<label><input type="radio" name="fll-searchengine" value="removed"> Slider pushed &amp; right loop(s) removed <em>60pts</em></label>
+			</div>
 			
-			<label><input type="radio" name="fll-searchengine" value="start" checked> Not touched</label>
-			<label><input type="radio" name="fll-searchengine" value="pushed"> Slider pushed <em>15pts</em></label>
-			<label><input type="radio" name="fll-searchengine" value="removed"> Slider pushed &amp; right loop(s) removed <em>60pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission sports">
-			<h2>Sports</h2>
+			<div class="field">
+				<h2>Sports</h2>
+				
+				<label><input type="radio" name="fll-sports" value="start" checked> Not shooted</label>
+				<label><input type="radio" name="fll-sports" value="shoot"> Took a shoot <em>30pts</em></label>
+				<label><input type="radio" name="fll-sports" value="goal"> Took a shoot &amp; Goal <em>60pts</em></label>
+			</div>
 			
-			<label><input type="radio" name="fll-sports" value="start" checked> Not shooted</label>
-			<label><input type="radio" name="fll-sports" value="shoot"> Took a shoot <em>30pts</em></label>
-			<label><input type="radio" name="fll-sports" value="goal"> Took a shoot &amp; Goal <em>60pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission reverseengineering">
-			<h2>Reverse Engineering</h2>
+			<div class="field">
+				<h2>Reverse Engineering</h2>
+				
+				<label><input type="radio" name="fll-reverseengineering" value="start" checked> Basket not touched</label>
+				<label><input type="radio" name="fll-reverseengineering" value="base"> Basket in base <em>30pts</em></label>
+				<label><input type="radio" name="fll-reverseengineering" value="replicated"> Basket in base &amp; Model replicated <em>45pts</em></label>
+			</div>
 			
-			<label><input type="radio" name="fll-reverseengineering" value="start" checked> Basket not touched</label>
-			<label><input type="radio" name="fll-reverseengineering" value="base"> Basket in base <em>30pts</em></label>
-			<label><input type="radio" name="fll-reverseengineering" value="replicated"> Basket in base &amp; Model replicated <em>45pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission changingconditions">
-			<h2>Adapting to Changing Conditions</h2>
+			<div class="field">
+				<h2>Adapting to Changing Conditions</h2>
+				
+				<label><input type="checkbox" name="fll-changingconditions"> Model rotated 90° counter-clockwise <em>15pts</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-changingconditions"> Model rotated 90° counter-clockwise <em>15pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission apprenticeship">
-			<h2>Apprenticeship</h2>
+			<div class="field">
+				<h2>Apprenticeship</h2>
+				
+				<label><input type="radio" name="fll-apprenticeship" value="start" checked> Not built</label>
+				<label><input type="radio" name="fll-apprenticeship" value="built"> Model built <em>20pts</em></label>
+				<label><input type="radio" name="fll-apprenticeship" value="circle"> Model built &amp; Placed in circle <em>35pts</em></label>
+			</div>
 			
-			<label><input type="radio" name="fll-apprenticeship" value="start" checked> Not built</label>
-			<label><input type="radio" name="fll-apprenticeship" value="built"> Model built <em>20pts</em></label>
-			<label><input type="radio" name="fll-apprenticeship" value="circle"> Model built &amp; Placed in circle <em>35pts</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission engagement">
-			<h2>Engagement</h2>
+			<div class="field">
+				<h2>Engagement</h2>
+				
+				<label><input type="checkbox" name="fll-engagement-lever"> Level is engaged <em>20pts</em></label>
+				<label><input type="number" name="fll-engagement-rotations" min="0" max="49" value="0"> Quarters of Pinwheel turns <em>+ 10% + 1%/quarter if turned</em></label>
+			</div>
 			
-			<label><input type="checkbox" name="fll-engagement-lever"> Level is engaged <em>20pts</em></label>
-			<label><input type="number" name="fll-engagement-rotations" min="0" max="49" value="0"> Quarters of Pinwheel turns <em>+ 10% + 1%/quarter if turned</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission projetlearning">
-			<h2>Project Based Learning</h2>
+			<div class="field">
+				<h2>Project Based Learning</h2>
+				
+				<label><input type="number" name="fll-projetlearning-loops" min="0" max="8" value="0"> Loops holded by the scale <em>20pts first loop, then 10pts/loop</em></label>
+			</div>
 			
-			<label><input type="number" name="fll-projetlearning-loops" min="0" max="8" value="0"> Loops holded by the scale <em>20pts first loop, then 10pts/loop</em></label>
+			<div class="score"></div>
 		</div>
 		
 		<div class="mission penaltypoints">
-			<h2>Penalty Points</h2>
+			<div class="field">
+				<h2>Penalty Points</h2>
+				
+				<label><input type="number" name="fll-penaltypoints" min="0" max="8" value="0"> Penaties <em>-10pts each</em></label>
+			</div>
 			
-			<label><input type="number" name="fll-penaltypoints" min="0" max="8" value="0"> Penaties <em>-10pts each</em></label>
+			<div class="score"></div>
+		</div>
+		
+		<div class="mission total">
+			<div class="field">
+				<h2>Total</h2>
+			</div>
+			
+			<div class="score totalpoints"></div>
 		</div>
 		
 		<div class="reset">Reset</div>
