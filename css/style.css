@@ -82,21 +82,21 @@ body{
 	border: 2px solid #F78B1F;
 }
 
-.mission.openingdoors			{ top: 60%;	left: 20%; }
-.mission.cloudaccess				{ top: 67%;	left: 65%; }
-.mission.communitylearning		{ top: 86%;	left: 80%; }
-.mission.roboticscompetition	{ top: 50%;	left: 50%; }
-.mission.rightsenses				{ top: 15%;	left: 80%; }
-.mission.thinkingoutsidebox	{ top: 43%;	left: 90%; }
-.mission.remotecommunication	{ top: 40%;	left: 71%; }
-.mission.searchengine			{ top: 35%;	left: 30%; }
-.mission.sports					{ top: 25%;	left: 46%; }
-.mission.reverseengineering	{ top: 10%;	left: 62%; }
-.mission.changingconditions	{ top: 86%;	left: 33%; }
-.mission.apprenticeship			{ top: 10%;	left: 21%; }
-.mission.engagement				{ top: 86%;	left: 50%; }
-.mission.projetlearning			{ top: 35%;	left: 10%; }
-.mission.penaltypoints			{ top: 86%;	left: 10%; }
+.mission.openingdoors          { top: 60%; left: 20%; }
+.mission.cloudaccess           { top: 67%; left: 65%; }
+.mission.communitylearning     { top: 86%; left: 80%; }
+.mission.roboticscompetition   { top: 50%; left: 50%; }
+.mission.rightsenses           { top: 15%; left: 80%; }
+.mission.thinkingoutsidethebox { top: 43%; left: 90%; }
+.mission.remotecommunication   { top: 40%; left: 71%; }
+.mission.searchengine          { top: 35%; left: 30%; }
+.mission.sports                { top: 25%; left: 46%; }
+.mission.reverseengineering    { top: 10%; left: 62%; }
+.mission.changingconditions    { top: 86%; left: 33%; }
+.mission.apprenticeship        { top: 10%; left: 21%; }
+.mission.engagement            { top: 86%; left: 50%; }
+.mission.projectlearning       { top: 35%; left: 10%; }
+.mission.penaltypoints         { top: 86%; left: 10%; }
 
 .mission h2{
 	margin: 0;
