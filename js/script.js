@@ -270,7 +270,9 @@ $(document).ready(function() {
 		points += score_engagementlever; // Lever points added in last place
 		$('.mission.engagement .score').html(score_engagementlever+' + '+score_engagementwheel);
 
-		$('.totalpoints').html(points);
+		// After discussing with some organisators we agreed that the score was
+		// usually rounded to an integer, although nothing is written in the rules
+		$('.totalpoints').html(Math.round(points)).attr('title', 'Score not rounded: ' + points);
 	}
 
 	/**
